@@ -36,7 +36,10 @@ func main() {
 	}
 
 	//Show response in console.
+	fmt.Println("")
+	fmt.Println("RESPONSE AFTER SENDING MESSAGE::")
 	fmt.Println(resp)
+	fmt.Println("")
 }
 
 func createExampleMsg() models.MessageModel {
