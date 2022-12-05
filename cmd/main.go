@@ -17,17 +17,25 @@ var (
 
 func main() {
 
+	//get cofirmation from ./configs/.env file
 	err := getEnvConfiguration()
 	if err != nil {
 		panic(err)
 	}
 
+	//set eventRouterCoreClient configuration
 	eventRouterCoreClient.SetConfiguration(EVENT_ROUTER_API_HOST, EVENT_ROUTER_API_PORT, EVENT_ROUTER_CLIENTID)
+
+	//create example message
 	msg := createExampleMsg()
+
+	//send message to Event router core API
 	resp, err := eventRouterCoreClient.NotifyEvent(&msg)
 	if err != nil {
 		panic(err)
 	}
+
+	//Show response in console.
 	fmt.Println(resp)
 }
 
