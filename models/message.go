@@ -13,12 +13,3 @@ type MessageModel struct {
 	Payload         string
 	SpecificPayload string
 }
-
-type PubSubMessageModel struct {
-	Payload         string
-	SpecificPayload string
-}
-
-type Response struct {
-	MessageID *string
-}
